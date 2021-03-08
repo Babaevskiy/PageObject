@@ -9,5 +9,7 @@ class BasketPage(BasePage):
             'Product is presented, but should not be'
 
     def should_be_message_that_basket_is_empty(self):
-        assert self.browser.find_element(*BasketPageLocators.MESSAGE_ABOUT_EMPTY_BASKET).text == \
-               'Your basket is empty. Continue shopping', 'Message about empty basket is not presented'
+        assert self.browser.find_element(
+            *BasketPageLocators.MESSAGE_ABOUT_EMPTY_BASKET).text == \
+               'Your basket is empty. Continue shopping', \
+            'Message about empty basket is not presented'
